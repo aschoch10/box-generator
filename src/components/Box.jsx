@@ -4,12 +4,19 @@ const Box =(props)=>{
     //creating state variables to hold form info
     let [boxColor, setBoxColor] = useState("")
 
-    // create box function
+    //state variable to hold boxes that were created in the form
+    let [listOfBoxes, setListOfBoxes] = useState([]);
+
+    // CREATE BOX FUNCTION
     let createBox = (e)=>{
         //preventing reloading page on form submission 
         e.preventDefault();
-        console.log("Submitted box color, please wait...")
-        console.log(boxColor)
+        // console.log("Submitted box color, please wait...")
+        // console.log(boxColor)
+        //  CREATING BOX OBJECT 
+        let boxObject = {boxColor}
+        console.log(boxObject)
+        setListOfBoxes([...listOfBoxes, boxColor])
     }
 
     //render view 
