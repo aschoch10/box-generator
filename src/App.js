@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import Box from './components/Box';
 
+// returning jsx file class
 function App() {
   return (
-    <div className="App">
-        <p>Because the sky is blue</p>
+    <div className="App container text-primary">
+        <Box></Box>
     </div>
   );
 }
