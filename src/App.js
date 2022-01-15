@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        <p>Why are my task bar icons not showing on both screens</p>
+        <p>Because the sky is blue</p>
     </div>
   );
 }
