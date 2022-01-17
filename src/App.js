@@ -4,7 +4,7 @@ import Box from './components/Box';
 // returning jsx file class
 function App() {
   return (
-    <div className="App container text-primary">
+    <div className="App container">
         <Box></Box>
     </div>
   );

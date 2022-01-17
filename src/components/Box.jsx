@@ -8,7 +8,7 @@ const Box =(props)=>{
     let [listOfBoxes, setListOfBoxes] = useState([]);
 
     // CREATE BOX FUNCTION
-    let createBox = (e)=>{
+    const createBox = (e)=>{
         //preventing reloading page on form submission 
         e.preventDefault();
         // console.log("Submitted box color, please wait...")
@@ -21,6 +21,7 @@ const Box =(props)=>{
 
     //render view 
     return (
+        <>
         <form onSubmit={createBox}>
             <div className="form-group"></div>
             <label htmlFor="">Add a new box, please type desired color below:</label>
@@ -28,6 +29,16 @@ const Box =(props)=>{
             <p></p>
             <button className="btn btn-primary" value="Create box">Go!</button>
         </form>
+        <hr/>
+
+        {
+            listOfBoxes.map((box)=>{
+                return (
+                    <h1>box color: {box.boxColor}</h1>
+                )
+            })
+        }
+        </>
     )
 } 
 
