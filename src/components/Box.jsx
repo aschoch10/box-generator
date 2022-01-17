@@ -30,14 +30,17 @@ const Box =(props)=>{
             <button className="btn btn-primary" value="Create box">Go!</button>
         </form>
         <hr/>
+        
 
         {
-            listOfBoxes.map((box)=>{
+            listOfBoxes.map((boxColor)=>{
                 return (
-                    <h1>box color: {box.boxColor}</h1>
+                    <p style={{backgroundColor: boxColor, display:"inline-block", margin:"2px", height:"20px", width:"20px"}}>
+                    </p>
                 )
             })
         }
+
         </>
     )
 } 
